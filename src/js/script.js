@@ -150,9 +150,9 @@
         },
 
         init: function () {
+            const thisApp = this;
             thisApp.initData();
             thisApp.initMenu();
-            const thisApp = this;
             console.log('*** App starting ***');
             console.log('thisApp:', thisApp);
             console.log('classNames:', classNames);
