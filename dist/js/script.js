@@ -112,7 +112,7 @@
 
         }
 
-        initOrderForm {
+        initOrderForm() {
             const thisProduct = this;
 
             thisProduct.form.addEventListener('submit', function (event) {
@@ -132,7 +132,7 @@
             });
         }
 
-        processOrder {
+        processOrder() {
             const thisProduct = this;
 
             /* read all data from the form (using utils.serializeFormToObject) and save it to const formData */
