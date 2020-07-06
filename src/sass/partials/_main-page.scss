@@ -1,0 +1,262 @@
+.main-page-wrapper {
+    margin: ($base-size * 3) auto;
+    padding: ($base-size * 6) ($base-size * 4);
+    background: $color-light;
+    border-bottom: 1px solid lighten($color-dark, 70%);
+    border-radius: $radius;
+  }
+  
+  .font-title {
+    font-family: $font-header;
+    font-size: 25px;
+    font-weight: 900;
+  }
+  
+  .secition-select-widget {
+    display: flex;
+    flex-wrap: wrap;
+  
+    .btn-section-select {
+      flex: 50%;
+      padding: 5px ($base-size / 3);
+      position: relative;
+      height: 130px;
+  
+      &:first-child {
+        padding-left: 0;
+      }
+  
+      &:nth-child(2){
+        padding-right: 0;
+      }
+  
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+      }
+  
+      a, p {
+        position: absolute;
+        color: $color-light;
+        transition: top 1s, bottom 1s;
+      }
+  
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
+      p {
+        z-index: -1;
+        visibility: hidden;
+        font-size: 16px;
+        bottom: -2%;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+  
+      &:hover {
+        cursor: pointer;
+  
+        a {
+          top: 30%;
+        }
+  
+        p {
+          z-index: 1;
+          visibility: visible;
+          bottom: 30%;
+        }
+      }
+    }
+  
+    .section-info {
+      flex: 100%;
+      background-color: $color-main;
+      border-radius: 7px;
+      text-align: center;
+      color: $color-light;
+      text-transform: uppercase;
+      height: 122px;
+  
+      h1 {
+        margin: 30px 0 5px 0;
+      }
+  
+      p {
+        margin-top: 0;
+      }
+  
+    }
+  }
+  
+  .carousel-review-widget {
+    position: relative;
+    margin-top: 100px;
+  
+    ul {
+      padding: 0;
+      position: absolute;
+      bottom: -75px;
+      left: 50%;
+      transform: translate(-50%);
+  
+      li {
+        display: inline-block;
+        background-color: $color-grey;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 12px;
+        transition: all 1s;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+  
+        &.active {
+          background-color: $color-dark;
+        }
+      }
+    }
+  
+    .carousel-item {
+      display: none;
+  
+      .carousel-image {
+        flex: 33.3333%;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      .review-text {
+        flex: 66.6666%;
+        margin-left: 25px;
+  
+        .review-subject {
+          margin-top: 0;
+          text-transform: uppercase;
+        }
+      }
+  
+      &.active {
+        display: flex;
+        animation: carouselMove 1s;
+      }
+    }
+  }
+  
+  .instagram-photo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 132px;
+  
+    .instagram-photo {
+      flex: 32%;
+      margin: 5px 10px 10px 0;
+      position: relative;
+      height: 190px;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+  
+      &::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        display: none;
+        border-radius: 4px;
+      }
+  
+      &:hover {
+        .icons {
+          display: block;
+        }
+  
+        &::after {
+          display: block;
+        }
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+  
+      .icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 3;
+  
+        a {
+          text-decoration: none;
+          color: $color-light;
+          margin: 0 5px;
+          font-size: 26px;
+  
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+  
+  .instagram-link {
+    display: block;
+    color: $color-main;
+    margin-top: 16px;
+  }
+  
+  
+  @keyframes carouselMove {
+    0% {opacity: 0;}
+  
+    10% {opacity: 10%;}
+  
+    20% {opacity: 20%;}
+  
+    30% {opacity: 30%;}
+  
+    40% {opacity: 40%;}
+  
+    50% {opacity: 50%;}
+  
+    60% {opacity: 60%;}
+  
+    70% {opacity: 70%;}
+  
+    80% {opacity: 80%;}
+  
+    90% {opacity: 90%;}
+  
+    100% {opacity: 100%;}
+  }
